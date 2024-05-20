@@ -1,4 +1,5 @@
 import javax.swing.*;
-public class OpeningScreen {
+/*public class OpeningScreen {
     private OpeningPanel panel;
 }
+*/
