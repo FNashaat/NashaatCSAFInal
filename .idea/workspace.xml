@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="main">
-      <change afterPath="$PROJECT_DIR$/src/assets/blossom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/bubbles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/butter.png" afterDir="false" />
+    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="more pngs added">
+      <change afterPath="$PROJECT_DIR$/src/BlossomAct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BubblesAct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ButterAct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OpeningPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpeningPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/puffbg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/puffbg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/puffbg.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/puffbg.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/puffbg1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/puffbg1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/puffbg2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/puffbg2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/puffbg3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/puffbg3.gif" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,13 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716214924597</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="more pngs added">
+      <created>1716301969638</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716301969638</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="working on opening screen" />
     <MESSAGE value="main" />
-    <option name="LAST_COMMIT_MESSAGE" value="main" />
+    <MESSAGE value="more pngs added" />
+    <option name="LAST_COMMIT_MESSAGE" value="more pngs added" />
   </component>
 </project>

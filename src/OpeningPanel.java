@@ -45,6 +45,14 @@ public class OpeningPanel extends JPanel implements ActionListener{
         startButton.setLocation(100, 70);
         instructions.setLocation(270, 280);
     }
+    public void actionPerformed(ActionEvent e){
+        if (e.getSource() instanceof JButton){
+            JButton button = (JButton) e.getSource();
+            if(button == startButton){
+
+            }
+        }
+    }
 
 
 }
