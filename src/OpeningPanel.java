@@ -14,11 +14,15 @@ public class OpeningPanel extends JPanel implements ActionListener{
     private BufferedImage blossom;
     private BufferedImage butter;
     private BufferedImage bubbles;
+    private BufferedImage logo;
 
     public OpeningPanel(JFrame frame){
         try{
             openingBg = ImageIO.read(new File("src/puffbg.gif"));
-            blossom = ImageIO.read(new File())
+            blossom = ImageIO.read(new File("src/assets/blossom.png"));
+            butter = ImageIO.read(new File("src/assets/butter.png"));
+            bubbles = ImageIO.read(new File("src/assets/bubbles.png"));
+            logo = ImageIO.read(new File("src/assets/logo.png"));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -36,9 +40,10 @@ public class OpeningPanel extends JPanel implements ActionListener{
         //change font later
         g.setFont(new Font("Arial", Font.BOLD, 18));
         g.setColor(Color.yellow);
-        g.drawString("Villain Breakout", 100, 100);
-
-
+        g.drawString("Villain Breakout", 100, 45);
+        g.drawImage(blossom, 250, 100, null);
+        startButton.setLocation(100, 70);
+        instructions.setLocation(270, 280);
     }
 
 
