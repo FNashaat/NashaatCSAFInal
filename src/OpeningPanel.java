@@ -1,4 +1,7 @@
 import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -16,6 +19,8 @@ public class OpeningPanel extends JPanel implements ActionListener{
     private BufferedImage bubbles;
     private BufferedImage logo;
 
+    private Clip songClip;
+
     public OpeningPanel(JFrame frame){
         try{
             openingBg = ImageIO.read(new File("src/puffbg.gif"));
@@ -32,6 +37,13 @@ public class OpeningPanel extends JPanel implements ActionListener{
         add(instructions);
         startButton.addActionListener(this);
         instructions.addActionListener(this);
+        playMusic();
+    }
+
+    private void playMusic(){
+        try{
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(""))
+        }
     }
 
     @Override
