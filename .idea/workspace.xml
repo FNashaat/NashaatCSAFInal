@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="more pngs added">
-      <change afterPath="$PROJECT_DIR$/src/assets/coin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/him.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/mojodojo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/steve1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/steve2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="more images added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716301969638</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="more images added">
+      <created>1716994242479</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716994242479</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -102,6 +102,7 @@
     <MESSAGE value="working on opening screen" />
     <MESSAGE value="main" />
     <MESSAGE value="more pngs added" />
-    <option name="LAST_COMMIT_MESSAGE" value="more pngs added" />
+    <MESSAGE value="more images added" />
+    <option name="LAST_COMMIT_MESSAGE" value="more images added" />
   </component>
 </project>

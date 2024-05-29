@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class OpeningPanel extends JPanel implements ActionListener{
     private BufferedImage openingBg;
@@ -18,6 +19,7 @@ public class OpeningPanel extends JPanel implements ActionListener{
     private BufferedImage butter;
     private BufferedImage bubbles;
     private BufferedImage logo;
+    private ArrayList <Coin> coins;
 
     private Clip songClip;
 
@@ -31,6 +33,7 @@ public class OpeningPanel extends JPanel implements ActionListener{
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        coins = new ArrayList<>();
         startButton = new JButton("Start");
         instructions = new JButton("How to Play");
         add(startButton);
