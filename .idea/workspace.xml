@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="more pngs added">
+      <change afterPath="$PROJECT_DIR$/src/assets/coin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/him.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/mojodojo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/steve1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/steve2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpeningPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpeningPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
