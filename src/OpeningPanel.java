@@ -20,12 +20,12 @@ public class OpeningPanel extends JPanel implements ActionListener{
     private BufferedImage bubbles;
     private BufferedImage logo;
     private ArrayList <Coins> coins;
+    private Animation runner;
 
     private Clip songClip;
 
     public OpeningPanel(JFrame frame){
         try{
-            openingBg = ImageIO.read(new File("src/puffbg.gif"));
             blossom = ImageIO.read(new File("src/assets/blossomOpen.png"));
             butter = ImageIO.read(new File("src/assets/butterOpen.png"));
             bubbles = ImageIO.read(new File("src/assets/bubblesOpen.png"));
@@ -33,6 +33,18 @@ public class OpeningPanel extends JPanel implements ActionListener{
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+
+        ArrayList<BufferedImage> runner_animation = new ArrayList<>();
+        for(int i = 1; i <= 3; i++){
+            String filename = "src/assets/puffbg" + i + ".gif";
+            try{
+                runner_animation.add(ImageIO.read(new File(filename)));
+            }
+            catch (IOException e){
+                System.out.println(e.getMessage());
+            }
+        }
+        runner = new Animation(runner_animation, 66);
         coins = new ArrayList<>();
         startButton = new JButton("Start");
         instructions = new JButton("How to Play");
@@ -45,7 +57,13 @@ public class OpeningPanel extends JPanel implements ActionListener{
 
     private void playMusic(){
         try{
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(""))
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/assets/powerSong.wav"));
+            songClip = AudioSystem.getClip();
+            songClip.open(audioInputStream);
+            songClip.loop(Clip.LOOP_CONTINUOUSLY);
+            songClip.start();
+        } catch(Exception e){
+            System.out.println(e.getMessage());
         }
     }
 
@@ -59,13 +77,31 @@ public class OpeningPanel extends JPanel implements ActionListener{
         g.drawImage(blossom, 250, 100, null);
         startButton.setLocation(100, 70);
         instructions.setLocation(270, 280);
+
+       /* for(int i = 0; i < coins.size(); i++){
+            Coins coin = coins.get(i);
+            g.drawImage(coin.getImage(), coin.getxCoord(), coin.getyCoord(), null);
+
+        }*/
     }
     public void actionPerformed(ActionEvent e){
         if (e.getSource() instanceof JButton){
             JButton button = (JButton) e.getSource();
             if(button == startButton){
-
+                songClip.stop();
+                songClip.close();
             }
+        }
+    }
+
+    private void playCoin(){
+        try{
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/assets/coin.wav").getAbsoluteFile());
+            Clip coinClip = AudioSystem.getClip();
+            coinClip.open(audioInputStream);
+            coinClip.start();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
         }
     }
 

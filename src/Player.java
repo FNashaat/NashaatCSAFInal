@@ -29,8 +29,8 @@ public class Player {
         //The code below is used to programatically create an ArrayList of BufferedImages to use for an Animation object
         //By creating all the BufferedImages beforehand, we don't have to worry about lagging trying to read image files during gameplay
         ArrayList<BufferedImage> run_animation = new ArrayList<>();
-        for (int i = 1; i <= 8; i++) {
-            //String filename = "src/blossom" + i + ".png";
+        for (int i = 1; i <= 2; i++) {
+            String filename = "src/steve" + i + ".png";
             try {
                 run_animation.add(ImageIO.read(new File(filename)));
             }
