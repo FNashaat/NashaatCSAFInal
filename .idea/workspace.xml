@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="more images added" />
+    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="more images added">
+      <change afterPath="$PROJECT_DIR$/src/Animation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/blossomOpen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coins.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpeningPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpeningPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/blossom.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/blossom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/bubbles.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/bubblesOpen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/butter.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/butterOpen.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,28 +29,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2gjaDwlw6qJRQirQpZOcx6FEKGZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/BT_1N3_34/IdeaProjects/NashaatCSAFInal/src/assets&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/BT_1N3_34/IdeaProjects/NashaatCSAFInal/src/assets"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\BT_1N3_34\IdeaProjects\NashaatCSAFInal\src\assets" />
       <recent name="C:\Users\BT_1N3_34\IdeaProjects\NashaatCSAFInal\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="C:\Users\BT_1N3_34\IdeaProjects\NashaatCSAFInal\src\assets" />
       <recent name="C:\Users\BT_1N3_34\IdeaProjects\NashaatCSAFInal\src" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-azul-20.0.2-4caba194b151-895bf479" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,5 +126,16 @@
     <MESSAGE value="more pngs added" />
     <MESSAGE value="more images added" />
     <option name="LAST_COMMIT_MESSAGE" value="more images added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Coins.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

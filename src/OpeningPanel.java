@@ -19,16 +19,16 @@ public class OpeningPanel extends JPanel implements ActionListener{
     private BufferedImage butter;
     private BufferedImage bubbles;
     private BufferedImage logo;
-    private ArrayList <Coin> coins;
+    private ArrayList <Coins> coins;
 
     private Clip songClip;
 
     public OpeningPanel(JFrame frame){
         try{
             openingBg = ImageIO.read(new File("src/puffbg.gif"));
-            blossom = ImageIO.read(new File("src/assets/blossom.png"));
-            butter = ImageIO.read(new File("src/assets/butter.png"));
-            bubbles = ImageIO.read(new File("src/assets/bubbles.png"));
+            blossom = ImageIO.read(new File("src/assets/blossomOpen.png"));
+            butter = ImageIO.read(new File("src/assets/butterOpen.png"));
+            bubbles = ImageIO.read(new File("src/assets/bubblesOpen.png"));
             logo = ImageIO.read(new File("src/assets/logo.png"));
         } catch (IOException e) {
             System.out.println(e.getMessage());
