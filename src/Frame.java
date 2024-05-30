@@ -5,7 +5,7 @@ public class Frame {
     public Frame(){
         JFrame frames = new JFrame("Powerpuff Girls: Villain Breakout");
         frames.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frames.setSize(300, 350);
+        frames.setSize(450, 350);
         frames.setLocationRelativeTo(null);
 
         frame = new OpeningPanel(frames);

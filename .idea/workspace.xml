@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="more images added">
-      <change afterPath="$PROJECT_DIR$/src/assets/coin.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/powerSong.wav" afterDir="false" />
+    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="coin sound added, animation for opening bg added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpeningPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpeningPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/powerSong.MP3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/puffbg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/puffbg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpeningScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/coin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/coin.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716994242479</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="coin sound added, animation for opening bg added">
+      <created>1717080108312</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717080108312</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,6 +129,7 @@
     <MESSAGE value="main" />
     <MESSAGE value="more pngs added" />
     <MESSAGE value="more images added" />
-    <option name="LAST_COMMIT_MESSAGE" value="more images added" />
+    <MESSAGE value="coin sound added, animation for opening bg added" />
+    <option name="LAST_COMMIT_MESSAGE" value="coin sound added, animation for opening bg added" />
   </component>
 </project>

@@ -3,6 +3,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+//https://stackoverflow.com/questions/38740219/gif-as-background-for-jframe
+//https://coderanch.com/t/736046/java/Jframe-image-background-content
 public class Animation implements ActionListener{
     private ArrayList<BufferedImage> frames;
     private Timer timer;
