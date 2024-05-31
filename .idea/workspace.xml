@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="coin sound added, animation for opening bg added">
+      <change afterPath="$PROJECT_DIR$/src/Instructions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image-removebg-preview (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image-removebg-preview (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/mojoshoot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpeningScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/coin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/coin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpeningPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpeningPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

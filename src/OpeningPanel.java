@@ -15,9 +15,9 @@ public class OpeningPanel extends JPanel implements ActionListener{
     private BufferedImage openingBg;
     private JButton startButton;
     private JButton instructions;
-    private BufferedImage blossom;
-    private BufferedImage butter;
-    private BufferedImage bubbles;
+    private BufferedImage blossomOP;
+    private BufferedImage butterOP;
+    private BufferedImage bubblesOP;
     private BufferedImage logo;
     private ArrayList <Coins> coins;
     private Animation runner;
@@ -26,9 +26,9 @@ public class OpeningPanel extends JPanel implements ActionListener{
 
     public OpeningPanel(JFrame frame){
         try{
-            blossom = ImageIO.read(new File("src/assets/blossomOpen.png"));
-            butter = ImageIO.read(new File("src/assets/butterOpen.png"));
-            bubbles = ImageIO.read(new File("src/assets/bubblesOpen.png"));
+            blossomOP = ImageIO.read(new File("src/assets/blossomOpen.png"));
+            butterOP = ImageIO.read(new File("src/assets/butterOpen.png"));
+            bubblesOP = ImageIO.read(new File("src/assets/bubblesOpen.png"));
             logo = ImageIO.read(new File("src/assets/logo.png"));
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -53,6 +53,14 @@ public class OpeningPanel extends JPanel implements ActionListener{
         startButton.addActionListener(this);
         instructions.addActionListener(this);
         playMusic();
+
+        instructions.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                frame.dispose();
+                new Instructions();
+            }
+        });
     }
 
     private void playMusic(){
@@ -74,9 +82,11 @@ public class OpeningPanel extends JPanel implements ActionListener{
         g.setFont(new Font("Arial", Font.BOLD, 18));
         g.setColor(Color.yellow);
         g.drawString("Villain Breakout", 100, 45);
-        g.drawImage(blossom, 250, 100, null);
+        g.drawImage(blossomOP, 250, 100, null);
         startButton.setLocation(100, 70);
         instructions.setLocation(270, 280);
+        g.drawImage(bubblesOP, 300, 100, null);
+        g.drawImage(butterOP, 350, 100, null);
 
        /* for(int i = 0; i < coins.size(); i++){
             Coins coin = coins.get(i);
