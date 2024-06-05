@@ -13,6 +13,7 @@ public class Player {
     private int score;
     private String name;
     private Animation run;
+    private Animation runner;
 
     public Player(String rightImg, String name) {
         this.name = name;
@@ -28,6 +29,8 @@ public class Player {
 
         //The code below is used to programatically create an ArrayList of BufferedImages to use for an Animation object
         //By creating all the BufferedImages beforehand, we don't have to worry about lagging trying to read image files during gameplay
+
+        //Easy level villain: steve animation -> fireball
         ArrayList<BufferedImage> run_animation = new ArrayList<>();
         for (int i = 1; i <= 2; i++) {
             String filename = "src/steve" + i + ".png";
@@ -40,7 +43,51 @@ public class Player {
         }
         run = new Animation(run_animation,66);
 
+
+//TO-DO mojo(if there's a better sprite
+       /* ArrayList<BufferedImage> mojo_animation = new ArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            String filename = "src/him" + i + ".png";
+            try {
+                mojo_animation.add(ImageIO.read(new File(filename)));
+            }
+            catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        runner = new Animation(mojo_animation,66);
+
+        */
+
+
+        //hard level villain: HIM animation shooting
+        ArrayList<BufferedImage> him_animation = new ArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            String filename = "src/him" + i + ".png";
+            try {
+                him_animation.add(ImageIO.read(new File(filename)));
+            }
+            catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        runner = new Animation(him_animation,66);
+
+
+
+        ArrayList<BufferedImage> himtele_animation = new ArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            String filename = "src/himtele" + i + ".png";
+            try {
+                himtele_animation.add(ImageIO.read(new File(filename)));
+            }
+            catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        runner = new Animation(himtele_animation,66);
     }
+
 
     //This function is changed from the previous version to let the player turn left and right
     //This version of the function, when combined with getWidth() and getHeight()
