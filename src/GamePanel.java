@@ -467,8 +467,14 @@ while(running) {
 
 		}
 		else{
-		    g.setColor(new Color(200,120,100));
-	     	g.fillRect(0, 0 , WIDTH, HEIGHT);
+		    //g.setColor(new Color(200,120,100));
+	     	//g.fillRect(0, 0 , WIDTH, HEIGHT);
+			try{
+				BufferedImage endImage = ImageIO.read(new File("src/endScreenFail.png"));
+				g.drawImage(endImage, 0 , 0, WIDTH, HEIGHT, null);
+			} catch (IOException e){
+				System.out.println(e.getMessage());;
+			}
 		}
 
 		if(slowStartTimer!=0){
@@ -577,7 +583,7 @@ while(running) {
 	        g.setFont(new Font("Century Gothic", Font.BOLD, 30));
 	        String s="G A M E    O V E R";
 	        int length=(int)g.getFontMetrics().getStringBounds(s,g).getWidth();
-	        g.setColor(Color.WHITE);
+	        g.setColor(Color.BLACK);
 	        g.drawString(s, WIDTH/2-length/2,HEIGHT/2);
 	        //setters off
 	        player.setLeft(false);

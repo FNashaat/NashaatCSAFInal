@@ -4,63 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="player and coin class modified">
-      <change afterPath="$PROJECT_DIR$/src/Bullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Explosion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Laser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PowerUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bubbles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/endScreenFail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BlossomAct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BubblesAct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ButterAct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coins.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Instructions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpeningPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthbar/bar9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/him1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/him2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/him3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/him4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/him5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/himtele1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/himtele2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/himtele3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/himtele4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/him/himtele5.png" beforeDir="false" />
-    </list>
+    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="changed up somethings-&gt; making it bubbles only but the difficulty levels still there" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717423653337</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changed up somethings-&gt; making it bubbles only but the difficulty levels still there">
+      <option name="closed" value="true" />
+      <created>1718078219498</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718078219498</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -192,6 +144,7 @@
     <MESSAGE value="more images added" />
     <MESSAGE value="coin sound added, animation for opening bg added" />
     <MESSAGE value="mojo dojo images done" />
-    <option name="LAST_COMMIT_MESSAGE" value="mojo dojo images done" />
+    <MESSAGE value="changed up somethings-&gt; making it bubbles only but the difficulty levels still there" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed up somethings-&gt; making it bubbles only but the difficulty levels still there" />
   </component>
 </project>
