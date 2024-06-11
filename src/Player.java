@@ -1,185 +1,232 @@
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+import javax.imageio.ImageIO;
+
+
 public class Player {
-    private final double MOVE_AMT = 0.6;
-    private BufferedImage right;
-    private boolean facingRight;
-    private double xCoord;
-    private double yCoord;
-    private int score;
-    private String name;
-    private Animation run;
-    private Animation runner;
+	private BufferedImage bubbles;
 
-    public Player(String rightImg, String name) {
-        this.name = name;
-        facingRight = true;
-        xCoord = 50; // starting position is (50, 435), right on top of ground
-        yCoord = 435;
-        score = 0;
-        try {
-            right = ImageIO.read(new File(rightImg));
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+	//check for firing bullets
+	private boolean firing;
 
-        //The code below is used to programatically create an ArrayList of BufferedImages to use for an Animation object
-        //By creating all the BufferedImages beforehand, we don't have to worry about lagging trying to read image files during gameplay
+	//check for directions set
+	private boolean left;
+	private boolean right;
+	private boolean up;
+	private boolean down;
 
-        //Easy level villain: steve animation -> fireball
-        ArrayList<BufferedImage> run_animation = new ArrayList<>();
-        for (int i = 1; i <= 2; i++) {
-            String filename = "src/steve" + i + ".png";
-            try {
-                run_animation.add(ImageIO.read(new File(filename)));
-            }
-            catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        run = new Animation(run_animation,66);
+	//drawing coordinates
+	private int x;
+	private int y;
+
+	//change in position
+	private int dx;
+	private int dy;
+
+	//size
+	private int r;
+
+	//lives
+	private int lives;
+
+	//speed (in pixels)
+	private int speed;
+
+	//Player Color
+	private Color playerColor;
+	private Color playerBoundaryColor;
+	private Rectangle boundary;
+
+	//Score
+	private int score;
+
+	//Fire
+	private long firingTimer;
+	private int firingDelay;
+
+	//Recover
+	private long recoveryTimer;
+	private boolean recovering;
+	private long switchTimer = 0;
+
+	//PowerUp System
+	private int powerLevel;
+	private int power;
+	private int[] requiredPower = {
+			1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+	};
+
+	//dead
+	private boolean dead;
+
+	public Player(){
+
+		try{
+			bubbles = ImageIO.read(new File("src/bubbles.png"));
+		} catch (IOException e){
+			System.out.println(e.getMessage());;
+		}
+
+		int playerWid = bubbles.getWidth();
+		int playerHei = bubbles.getHeight();
+		boundary = new Rectangle(0, 0, playerWid, playerHei);
+
+		//Set initial Coordinates
+		x = GamePanel.WIDTH/2;
+	    y = GamePanel.HEIGHT/2;
+
+	    //Set Speed
+	    speed = 6;
+
+	    //Set Radius
+	    r = 10;
+
+	    //Set Default Firing
+		firing = false;
+
+		//Set Player Colors
+		playerColor = Color.RED;
+		playerBoundaryColor = Color.WHITE;
+
+		//set life
+		lives = 5;
+
+		//Firing Timer
+		firingTimer = System.nanoTime();
+
+		//Firing Delay Set
+		firingDelay = 150;
+
+		//set recovering
+		recovering = false;
+
+		//dead initialize
+		dead = false;
+
+		//score
+		score = 0;
 
 
-//TO-DO mojo(if there's a better sprite
-       /* ArrayList<BufferedImage> mojo_animation = new ArrayList<>();
-        for (int i = 1; i <= 5; i++) {
-            String filename = "src/him" + i + ".png";
-            try {
-                mojo_animation.add(ImageIO.read(new File(filename)));
-            }
-            catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        runner = new Animation(mojo_animation,66);
+	}
 
-        */
+	//Getter Methods
+	public int getx(){return x;}
+	public int gety(){return y;}
+	public int getr(){return r;}
+	public int getLives(){return lives;}
+	public int getScore(){return score;}
+	public int getPower(){return power;}
+	public int getPowerLevel(){return powerLevel;}
+	public int getRequiredPower(){return requiredPower[powerLevel];}
+
+	//Setter methods
+	public void setLeft(boolean set){left = set;}
+	public void setRight(boolean set){right = set;}
+	public void setUp(boolean set){up = set;}
+	public void setDown(boolean set){down = set;}
+	public void setFiring(boolean set){firing = set;}
+
+	//Life methods
+	public boolean isRecovering(){return recovering;}
+	public boolean isOver(){return dead;}
+
+	//collision method
+	public void loseLife(){
+
+		lives--;
+		if(lives <= 0) dead = true;
+		recovering = true;
+		recoveryTimer = System.nanoTime();
+
+	}
+
+	//PowerUp Methods
+	public void addLife(){lives++;}
+	public void addPower(int n){
+		power += n;
+		if(power >= requiredPower[powerLevel]){
+			power -= requiredPower[powerLevel];
+			powerLevel++;
+		}
+	}
+
+	//addScore
+	public void addScore(int n){score+=n;}
+
+	public void update(){
+
+		if(left) dx = -speed;
+		if(right) dx = speed;
+		if(up) dy = -speed;
+		if(down) dy = speed;
+		x+=dx;
+		y+=dy;
+		if(x < 2) x = 1;
+		if(y < 2) y = 1;
+		if(x > GamePanel.WIDTH - 2*r-3) x = GamePanel.WIDTH - 2*r-3;
+		if(y > GamePanel.HEIGHT - 2*r-3) y = GamePanel.HEIGHT - 2*r-3;
+		dx=0;
+		dy=0;
+		if(firing){
+
+			long elapsed = (System.nanoTime() - firingTimer)/1000000;
+			if(elapsed > firingDelay){
+				firingTimer = System.nanoTime();
+				if(powerLevel < 2) GamePanel.bullets.add(new Bullet(270, x, y));
+				else if(powerLevel < 4){
+					GamePanel.bullets.add(new Bullet(270, x + 5, y));
+				    GamePanel.bullets.add(new Bullet(270, x - 5, y));
+				}
+				else{
+					GamePanel.bullets.add(new Bullet(270, x, y));
+					GamePanel.bullets.add(new Bullet(280, x + 5, y));
+				    GamePanel.bullets.add(new Bullet(265, x - 5, y));
+				}
+			}
+		}
+
+		long elapsed = (System.nanoTime() - recoveryTimer)/1000000;
+		if(elapsed > 2000 && recovering){
+			recovering = false;
+			recoveryTimer = 0;
+		}
+
+	}
+
+	public void draw(Graphics2D g){
+
+		if(!recovering && !GamePanel.player.isOver()){
+			if(bubbles != null){
+				g.drawImage(bubbles, x, y, null);
+			}
+
+			/*g.setStroke(new BasicStroke(2));
+			g.setColor(playerColor);
+			g.fillOval(x, y, 2*r, 2*r);
+			g.setColor(playerBoundaryColor);
+			g.drawOval(x, y, 2*r, 2*r);
+			g.setStroke(new BasicStroke(1));
+			*/
 
 
-        //hard level villain: HIM animation shooting
-        ArrayList<BufferedImage> him_animation = new ArrayList<>();
-        for (int i = 1; i <= 5; i++) {
-            String filename = "src/him" + i + ".png";
-            try {
-                him_animation.add(ImageIO.read(new File(filename)));
-            }
-            catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        runner = new Animation(him_animation,66);
+		}else{
+			long elapsed = (System.nanoTime() - switchTimer)/1000000;
+			if(elapsed > 50 || GamePanel.player.isOver()){
+				g.drawImage(bubbles, x, y, null);
+				/*g.setStroke(new BasicStroke(3));
+				g.setColor(Color.WHITE);
+				g.fillOval(x, y, 2*r, 2*r);
+				g.setColor(Color.RED);
+				g.drawOval(x, y, 2*r, 2*r);
+				g.setStroke(new BasicStroke(1));
+				switchTimer = System.nanoTime();
+*/
+			}
 
+		}
 
+	}
 
-        ArrayList<BufferedImage> himtele_animation = new ArrayList<>();
-        for (int i = 1; i <= 5; i++) {
-            String filename = "src/himtele" + i + ".png";
-            try {
-                himtele_animation.add(ImageIO.read(new File(filename)));
-            }
-            catch (IOException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        runner = new Animation(himtele_animation,66);
-    }
-
-
-    //This function is changed from the previous version to let the player turn left and right
-    //This version of the function, when combined with getWidth() and getHeight()
-    //Allow the player to turn without needing separate images for left and right
-    public int getxCoord() {
-        if (facingRight) {
-            return (int) xCoord;
-        } else {
-            return (int) (xCoord + (getPlayerImage().getWidth()));
-        }
-    }
-
-    public int getyCoord() {
-        return (int) yCoord;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void faceRight() {
-        facingRight = true;
-    }
-
-    public void faceLeft() {
-        facingRight = false;
-    }
-
-    public void moveRight() {
-        if (xCoord + MOVE_AMT <= 920) {
-            xCoord += MOVE_AMT;
-        }
-    }
-
-    public void moveLeft() {
-        if (xCoord - MOVE_AMT >= 0) {
-            xCoord -= MOVE_AMT;
-        }
-    }
-
-    public void moveUp() {
-        if (yCoord - MOVE_AMT >= 0) {
-            yCoord -= MOVE_AMT;
-        }
-    }
-
-    public void moveDown() {
-        if (yCoord + MOVE_AMT <= 435) {
-            yCoord += MOVE_AMT;
-        }
-    }
-
-    public void turn() {
-        if (facingRight) {
-            faceLeft();
-        } else {
-            faceRight();
-        }
-    }
-
-    public void collectCoin() {
-        score++;
-    }
-
-    public BufferedImage getPlayerImage() {
-        return run.getActiveFrame();
-    }
-
-    //These functions are newly added to let the player turn left and right
-    //These functions when combined with the updated getxCoord()
-    //Allow the player to turn without needing separate images for left and right
-    public int getHeight() {
-        return getPlayerImage().getHeight();
-    }
-
-    public int getWidth() {
-        if (facingRight) {
-            return getPlayerImage().getWidth();
-        } else {
-            return getPlayerImage().getWidth() * -1;
-        }
-    }
-
-    // we use a "bounding Rectangle" for detecting collision
-    public Rectangle playerRect() {
-        int imageHeight = getPlayerImage().getHeight();
-        int imageWidth = getPlayerImage().getWidth();
-        Rectangle rect = new Rectangle((int) xCoord, (int) yCoord, imageWidth, imageHeight);
-        return rect;
-    }
 }

@@ -4,34 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="mojo dojo images done">
-      <change afterPath="$PROJECT_DIR$/src/assets/lasermaybe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/healthbar/bar9.png" afterDir="false" />
+    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="player and coin class modified">
+      <change afterPath="$PROJECT_DIR$/src/Bullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Explosion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Laser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PowerUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bubbles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/endScreenFail.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Animation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlossomAct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BubblesAct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ButterAct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coins.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Instructions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpeningPanel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mojoshoot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/mojoshoot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthbar/bar9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/him1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/him2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/him3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/him4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/him5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/himtele1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/himtele2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/himtele3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/himtele4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/him/himtele5.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +87,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Game.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -74,8 +103,9 @@
       <recent name="C:\Users\BT_1N3_34\IdeaProjects\NashaatCSAFInal\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\BT_1N3_34\IdeaProjects\NashaatCSAFInal\src\assets" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="C:\Users\BT_1N3_34\IdeaProjects\NashaatCSAFInal\src\assets" />
       <recent name="C:\Users\BT_1N3_34\IdeaProjects\NashaatCSAFInal\src" />
     </key>
   </component>
