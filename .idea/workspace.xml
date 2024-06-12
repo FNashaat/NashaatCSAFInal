@@ -4,10 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="making sure everything is committed">
-      <change afterPath="$PROJECT_DIR$/src/endingTheme.wav" afterDir="false" />
+    <list default="true" id="01a306f7-d29b-46f9-998c-dd60621e66ee" name="Changes" comment="added music">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/coin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/coin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/him.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/him.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/image-removebg-preview (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/laserFINAL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/lasermaybe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mojoSideView.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mojodojo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mojolaser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mojoshoot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/powerSong.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/steve1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/steve2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bubbles.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/bubbles.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718080580859</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added music">
+      <option name="closed" value="true" />
+      <created>1718158129617</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718158129617</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +198,7 @@
     <MESSAGE value="code isn't pushing for some reason" />
     <MESSAGE value="end screen created" />
     <MESSAGE value="making sure everything is committed" />
-    <option name="LAST_COMMIT_MESSAGE" value="making sure everything is committed" />
+    <MESSAGE value="added music" />
+    <option name="LAST_COMMIT_MESSAGE" value="added music" />
   </component>
 </project>

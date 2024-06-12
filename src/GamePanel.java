@@ -4,6 +4,7 @@ import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.Buffer;
 import java.util.ArrayList;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -17,6 +18,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
 	private static final long serialVersionUID = 10;
 	private BufferedImage bgimage;
+	private BufferedImage him;
 	public static int WIDTH;
 	public static int HEIGHT;
 	private int FPS;
@@ -151,7 +153,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 		long targetTime = 1000/FPS;
 
 while(running) {
-			
+			//nanoseconds
 			startTime = System.nanoTime();
 			
 			gameUpdate();
@@ -211,14 +213,12 @@ while(running) {
 		for(int i = 0; i < enemies.size(); i++){
 			enemies.get(i).update();
 		}
-		
-		//Bullet-Enemy Collision
+
 		if(!laserTaken)
 		for(int i = 0; i < bullets.size(); i++){
 			
 			Bullet b = bullets.get(i);
-			
-			//Getting Coordinates of Bullet
+
 			double bx = b.getx();
 			double by = b.gety();
 			double br = b.getr();
@@ -226,7 +226,7 @@ while(running) {
 			for(int j = 0; j < enemies.size(); j++){
 				
 				Enemy e = enemies.get(j);
-				//Getting coordinates of enemy
+				//enemy coordinates
 				double ex = e.getx();
 				double ey = e.gety();
 				double er = e.getr();
@@ -240,7 +240,7 @@ while(running) {
 				boolean removed = false;
 				if(dist < br +er){
 					
-					//Collision Detected
+					//Collision
 					
 					//Create New
 					if(e.getHealth() == 2){
@@ -498,6 +498,15 @@ while(running) {
 			if(alpha > 255) alpha = 255;
 			g.setColor(new Color(255, 255, 255, alpha));
 			g.drawString(s, WIDTH/2 - length/2, HEIGHT/2);
+
+			try{
+				BufferedImage waveImage = ImageIO.read(new File("src/him.png"));
+				int imageX = WIDTH / 2 - length / 2 - waveImage.getWidth() - 10;
+				int imageY = HEIGHT / 2 - waveImage.getHeight() / 2;
+				g.drawImage(waveImage, imageX, imageY, null);
+			} catch (IOException e){
+				e.printStackTrace();
+			}
 
 		}
 
