@@ -5,37 +5,24 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class GamePanel extends JPanel implements Runnable, KeyListener{
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 10;
 	private BufferedImage bgimage;
-	
-	//Background Color
-	private Color bgColor;
-	
-	//Dimensions
 	public static int WIDTH;
 	public static int HEIGHT;
-	
-	//FPS
 	private int FPS;
-	
-	//Game Loop
 	private boolean running;
-	
-	//Graphics
 	public Graphics2D g;
 	public BufferedImage image;
-	
-	//Thread
 	private Thread thread;
 	
 	//Player
@@ -69,6 +56,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 	private long slowStartTimer;
 	private int slowLength;
 	private long slowElapsed;
+	private Clip songClip;
 	
 	//Constructor
 	public GamePanel(){
@@ -79,6 +67,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 		} catch (IOException e){
 			System.out.println(e.getMessage());;
 		}
+
+		playMusic();
 
 		
 		//Dimension Initialize
@@ -114,7 +104,18 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 		}
 		addKeyListener(this);
 	}
-	
+
+	private void playMusic(){
+		try{
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/endingTheme.wav").getAbsoluteFile());
+			songClip = AudioSystem.getClip();
+			songClip.open(audioInputStream);
+			songClip.loop(Clip.LOOP_CONTINUOUSLY);
+			songClip.start();
+		} catch (Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
 	public void run(){
 		
 		running = true;
@@ -137,23 +138,18 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 		
 		//Initialize PowerUps
 		powerups = new ArrayList<PowerUp>();
-		
-		//anti-aliasing
+
 		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, 
 				           RenderingHints.VALUE_ANTIALIAS_ON);
 		
 		g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, 
 				           RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-		
-		// FPS
+
 		long startTime;
 		long waitTime;
 		long URDTimeMillis;
 		long targetTime = 1000/FPS;
-		
-		/**
-		 * GAME LOOP
-		 */
+
 while(running) {
 			
 			startTime = System.nanoTime();
